@@ -1,5 +1,6 @@
  
 import logo from '../../../src/assets/hop-removebg-preview.png'
+ 
 const Footer = () => {
     return (
         <div>
