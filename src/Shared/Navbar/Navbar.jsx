@@ -5,7 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
 
-    const {user}= useContext(AuthContext)
+    const {user,logOut}= useContext(AuthContext)
     const navItems = <>
         <li className="hover:text-[#a7a705]" >
             <Link to='/'>Home</Link> </li>
@@ -17,6 +17,11 @@ const Navbar = () => {
         <li className="hover:text-[#a7a705]"       ><Link>Add a Toy</Link></li>
         <li className="hover:text-[#a7a705]"       ><Link>Blogs</Link> </li>
     </>
+    const handleLogOut = () => {
+        logOut()
+        .then(result => console.log(result))
+        .catch(error => console.log(error))
+    }
     return (
         <div className="navbar bg-base-100 mx-auto">
             <div className="navbar-start">
@@ -41,7 +46,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {user? <div className="flex "><img className="rounded-xl mr-2" width={'50px'} src={user?.photoURL} alt="" /> <button className="btn btn-outline btn-warning">Log Out</button></div>:<Link to='/login'> <button className="btn btn-outline btn-warning">Login</button></Link>}
+                {user? <div className="flex ">
+                    <div  className="tooltip" data-tip={user.displayName}><img className="rounded-xl mr-2" width={'50px'} src={user?.photoURL} alt="" /> </div>
+                    <button onClick={handleLogOut} className="btn btn-outline btn-warning">Log Out</button></div>:<Link to='/login'> <button className="btn btn-outline btn-warning">Login</button></Link>}
                 
 
               
