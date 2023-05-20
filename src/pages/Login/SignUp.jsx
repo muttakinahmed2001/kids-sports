@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 const SignUp = () => {
     const [error,setError]= useState();
+    const [success,setSuccess]=useState();
     const {signUp }= useContext(AuthContext);
     const handleSignUp = event => {
         event.preventDefault();
@@ -18,15 +19,15 @@ const SignUp = () => {
         signUp(email,password)
         .then(result => {
             const user = result.user;
-             
+             setSuccess('You have sign up  successfully')
             updateUserData( result.user,name,photo)
-            
+            setSuccess('')
+            form.reset()
             setError('')
+            
         })
         .catch(error => setError(error.message))
-        if(password.length<6){
-            setError('Password Password should be at least 6 characters')
-          }
+         
           const updateUserData = (user,name,photo) => {
             updateProfile(user, {
                 displayName: name, photoURL: photo
@@ -35,10 +36,10 @@ const SignUp = () => {
                 console.log('User name updated')
                 
             })
-            .catch(error => console.log(error.message
+            .catch(error => setError(error.message
                 ))
           }
-        
+          
       }
 
      
@@ -63,7 +64,7 @@ const SignUp = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name='name' placeholder="Your name" className="input input-bordered" />
+                        <input type="text" name='name' placeholder="Your name" required  className="input input-bordered" />
                     </div>
                         <div className="form-control">
                         <label className="label">
@@ -75,7 +76,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' required placeholder="password" className="input input-bordered" />
 
                         </div>
                         <div className="form-control">
@@ -96,6 +97,7 @@ const SignUp = () => {
                     <h3>Already have an account? <Link to='/login' className="font-bold">Login</Link></h3>
 
                     <h3 className="text-red-700">{error}</h3>
+                    <h3 className="text-green-700">{success}</h3>
 
 
                 </div>

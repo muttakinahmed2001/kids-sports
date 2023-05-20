@@ -1,10 +1,11 @@
 import { FcGoogle } from "react-icons/fc";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
+  const [error,setError]= useState();
 
   const {signIn,googleSignIn }= useContext(AuthContext);
   const handleLogin = event => {
@@ -17,8 +18,9 @@ const Login = () => {
     .then(result => {
       const user = result.user;
       console.log(user)
+      setError('')
     })
-    .catch(error => console.log(error))
+    .catch(error => setError(error.message))
   }
 
   const handleGoogleSignIn = () => {
@@ -26,9 +28,10 @@ const Login = () => {
     .then(result => {
       const user = result.user;
       console.log(user)
+      setError('')
       
     })
-    .catch(error => console.log(error))
+    .catch(error => setError(error.message))
 
   }
 
@@ -53,13 +56,13 @@ const Login = () => {
             <label className="label">
               <span className="label-text">Email</span>
             </label>
-            <input type="email" name='email' placeholder="email" className="input input-bordered" />
+            <input type="email" name='email' placeholder="email" required className="input input-bordered" />
           </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input type="password" name='password' placeholder="password" className="input input-bordered" />
+            <input type="password" name='password' placeholder="password" required className="input input-bordered" />
              
           </div>
           <div className="form-control mt-6">
@@ -70,7 +73,7 @@ const Login = () => {
 
           <h3>Don't have an account? <Link to='/signUp' className="font-bold">Sign up for free</Link></h3>
           
-         
+         <h3 className="text-rose-700">{error}</h3>
         </div>
       </div>
     </div>
