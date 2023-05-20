@@ -20,7 +20,7 @@ const SignUp = () => {
         .then(result => {
             const user = result.user;
              setSuccess('You have sign up  successfully')
-            updateUserData( result.user,name,photo)
+            updateUserData( user,name,photo)
             setSuccess('')
             form.reset()
             setError('')
