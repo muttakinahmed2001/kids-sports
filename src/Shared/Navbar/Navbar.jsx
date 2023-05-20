@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from '../../../src/assets/hop-removebg-preview.png'
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
+
+    const {user}= useContext(AuthContext)
     const navItems = <>
         <li className="hover:text-[#a7a705]" >
             <Link to='/'>Home</Link> </li>
@@ -37,7 +41,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login'> <button className="btn btn-outline btn-warning">Login</button></Link>
+                {user? <div className="flex "><img className="rounded-xl mr-2" width={'50px'} src={user?.photoURL} alt="" /> <button className="btn btn-outline btn-warning">Log Out</button></div>:<Link to='/login'> <button className="btn btn-outline btn-warning">Login</button></Link>}
+                
+
+              
                
             </div>
         </div>

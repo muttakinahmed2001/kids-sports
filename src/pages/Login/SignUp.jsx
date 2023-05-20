@@ -76,7 +76,7 @@ const SignUp = () => {
                         </form>
 
 
-                    <h3>Already have an account? <Link to='/signUp' className="font-bold">Login</Link></h3>
+                    <h3>Already have an account? <Link to='/login' className="font-bold">Login</Link></h3>
 
                     <h3 className="text-red-700">{error}</h3>
 
