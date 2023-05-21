@@ -6,7 +6,7 @@ import MiniHockeyCard from "./MiniHockeyCard";
 const MiniHockey = () => {
     const [toys,setToys] =useState([])
 
-    const url = `https://toy-server-snowy.vercel.app/toys?category=Miniature%20Hockey`
+    const url = `https://toy-server-snowy.vercel.app/toys?subCategory=Miniature%20Hockey`
 
  useEffect(() => {
     fetch(url)

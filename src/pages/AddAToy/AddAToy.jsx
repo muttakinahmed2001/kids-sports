@@ -31,7 +31,14 @@ fetch('https://toy-server-snowy.vercel.app/toys', {
   })
   .then(res => res.json())
   .then(data => {console.log(data);
-})
+if(data.insertedId){
+    Swal.fire({
+        title: 'Success',
+        text: 'Toy Added Successfully',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+}})
   }
  
   

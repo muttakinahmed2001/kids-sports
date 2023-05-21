@@ -10,7 +10,7 @@ const Navbar = () => {
         <li className="hover:text-[#a7a705]" >
             <Link to='/'>Home</Link> </li>
         <li className="hover:text-[#a7a705]" >
-            <Link>All Toys</Link> </li>
+            <Link to='allToys'>All Toys</Link> </li>
 
         <li className="hover:text-[#a7a705]"       >  <Link>My Toys</Link>
         </li>

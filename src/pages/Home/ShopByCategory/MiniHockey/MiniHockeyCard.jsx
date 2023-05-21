@@ -1,14 +1,14 @@
  
 
 const MiniHockeyCard = ({toy}) => {
-    const {picture,name,price,rating } = toy
+    const {photo,name,price,rating } = toy
     return (
       
      
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
-    <img src={picture} alt="Shoes" className="rounded-xl" />
+    <img src={photo} alt="Shoes" className="rounded-xl" />
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{name}</h2>
