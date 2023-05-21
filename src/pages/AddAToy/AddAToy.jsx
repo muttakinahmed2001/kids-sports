@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-
+import Swal from 'sweetalert2'
 
 const AddAToy = () => {
   const {user}= useContext(AuthContext);
@@ -20,7 +20,22 @@ const photo = form.photo.value;
 
 const toy = {name,seller,email,subCategory,details,price,rating,quantity,photo}
 console.log(toy)
+
+fetch('https://toy-server-snowy.vercel.app/toys', {
+    method: 'POST',
+    headers: {
+        'content-type':'application/json'
+    },
+    body: JSON.stringify(toy)
+
+  })
+  .then(res => res.json())
+  .then(data => {console.log(data);
+})
   }
+ 
+  
+
     return (
         <div className="bg-[#d7bfbf] p-24">
             <h2 className="text-4xl font-bold text-center mb-5">Add a Toy</h2>
