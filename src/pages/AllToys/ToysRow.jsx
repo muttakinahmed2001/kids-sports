@@ -12,7 +12,7 @@ const ToysRow = ({toy}) => {
         <td>{subCategory}</td> 
         <td>{price}</td> 
         <td>{quantity}</td> 
-        <td>{<button>View Details</button>}</td>
+        <td>{<button className=" btn btn-warning">View Details</button>}</td>
        
       </tr> 
          

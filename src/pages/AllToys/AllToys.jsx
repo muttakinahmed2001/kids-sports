@@ -9,7 +9,7 @@ const AllToys = () => {
     useEffect(()=>{
         fetch('https://toy-server-snowy.vercel.app/toys')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setToys(data))
     },[])
      
     return (

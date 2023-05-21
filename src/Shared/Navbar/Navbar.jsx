@@ -12,7 +12,7 @@ const Navbar = () => {
         <li className="hover:text-[#a7a705]" >
             <Link to='allToys'>All Toys</Link> </li>
 
-        <li className="hover:text-[#a7a705]"       >  <Link>My Toys</Link>
+        <li className="hover:text-[#a7a705]"       >  <Link to='/myToys'>My Toys</Link>
         </li>
         <li className="hover:text-[#a7a705]"       ><Link to='/addAToy'>Add a Toy</Link></li>
         <li className="hover:text-[#a7a705]"       ><Link>Blogs</Link> </li>
