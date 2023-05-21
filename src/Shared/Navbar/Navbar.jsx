@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {user? <div className="flex ">
-                    <div  className="tooltip" data-tip={user.displayName}><img className="rounded-xl mr-2" width={'50px'} src={user?.photoURL} alt="" /> </div>
+                    <div  className="tooltip" data-tip={user.displayName}><img className="rounded-full mr-2" width={'40px'} src={user?.photoURL} alt="" /> </div>
                     <button onClick={handleLogOut} className="btn btn-outline btn-warning">Log Out</button></div>:<Link to='/login'> <button className="btn btn-outline btn-warning">Login</button></Link>}
                 
 
