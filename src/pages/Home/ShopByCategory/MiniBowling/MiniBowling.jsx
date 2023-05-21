@@ -6,7 +6,7 @@ const MiniBowling = () => {
 
     const [toys,setToys] =useState([])
 
-    const url = `http://localhost:5000/toys?category=Miniature%20Bowling`
+    const url = `https://toy-server-snowy.vercel.app/toys?category=Miniature%20Bowling`
 
  useEffect(() => {
     fetch(url)
@@ -15,7 +15,7 @@ const MiniBowling = () => {
 
  },[])
     return (
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-3">
             {
                 toys.map(toy => <MiniBowlingCard key={toy._id} toy={toy}></MiniBowlingCard>
                     )

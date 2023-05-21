@@ -6,7 +6,7 @@ import MiniBasketBallCard from "./MiniBasketBallCard";
 const MiniBasketBall = () => {
     const [toys,setToys] =useState([])
 
-    const url = `http://localhost:5000/toys?category=Miniature%20Basketball`
+    const url = `https://toy-server-snowy.vercel.app/toys?category=Miniature%20Basketball`
 
  useEffect(() => {
     fetch(url)
@@ -15,7 +15,7 @@ const MiniBasketBall = () => {
 
  },[])
     return (
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-3">
             {
                 toys.map(toy => <MiniBasketBallCard  key={toy._id} toy={toy}></MiniBasketBallCard>  
                     )

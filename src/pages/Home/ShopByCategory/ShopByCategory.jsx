@@ -7,22 +7,22 @@ import MiniHockey from './MiniHockey/MiniHockey';
 
 const ShopByCategory = () => {
     return (
-        <div className='text-center mx-auto mt-5 '>
+        <div className='text-center mx-auto mt-5  p-5'>
           <h1 className='text-5xl mb-5'>Shop by category</h1>
               <Tabs>
-    <TabList>
+    <TabList className='bg-[#f4aa2b]'>
       <Tab> Mini Bowling</Tab>
       <Tab> Mini Basketball</Tab>
       <Tab>Mini Hockey</Tab>
     </TabList>
 
-    <TabPanel>
+    <TabPanel className='p-3'>
        <MiniBowling></MiniBowling>
     </TabPanel>
-    <TabPanel>
+    <TabPanel className='p-3'>
       <MiniBasketBall></MiniBasketBall>
     </TabPanel>
-    <TabPanel>
+    <TabPanel className='p-3'>
       <h2><MiniHockey></MiniHockey></h2>
     </TabPanel>
   </Tabs>

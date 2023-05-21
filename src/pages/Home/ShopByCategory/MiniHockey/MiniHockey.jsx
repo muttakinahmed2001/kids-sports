@@ -6,7 +6,7 @@ import MiniHockeyCard from "./MiniHockeyCard";
 const MiniHockey = () => {
     const [toys,setToys] =useState([])
 
-    const url = `http://localhost:5000/toys?category=Miniature%20Hockey`
+    const url = `https://toy-server-snowy.vercel.app/toys?category=Miniature%20Hockey`
 
  useEffect(() => {
     fetch(url)
@@ -15,7 +15,7 @@ const MiniHockey = () => {
 
  },[])
     return (
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-3">
             {
                 toys.map(toy => <MiniHockeyCard key={toy._id} toy={toy}></MiniHockeyCard>
                     )
