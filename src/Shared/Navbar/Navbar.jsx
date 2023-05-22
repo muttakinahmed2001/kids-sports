@@ -8,7 +8,7 @@ const Navbar = () => {
     const {user,logOut}= useContext(AuthContext)
     const navItems = <>
     <img className="md:invisible lg:invisible rounded-full ml-3" style={{width: '40px'}} src={user?.photoURL} alt="" />
-        <li className="hover:text-[#a7a705]" >
+        <li className="hover:text-[#a7a705] " >
             <Link to='/'>Home</Link> </li>
         <li className="hover:text-[#a7a705]" >
             <Link to='allToys'>All Toys</Link> </li>
@@ -30,7 +30,7 @@ const Navbar = () => {
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow font-bold   bg-base-100  rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow font-bold text-[#5858c6]  bg-base-100  rounded-box w-52">
                         {navItems}
                     </ul>
 

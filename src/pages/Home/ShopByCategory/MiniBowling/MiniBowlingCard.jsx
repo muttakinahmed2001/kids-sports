@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
  
 
 const MiniBowlingCard = ({toy}) => {
-    const {photo,name,price,rating } = toy
+    const {_id,photo,name,price,rating } = toy
     return (
         <div style={{width:'150px'}}>
             <div className="card w-80 bg-base-100 shadow-xl">
@@ -13,7 +15,8 @@ const MiniBowlingCard = ({toy}) => {
     <p className="font-bold"> Price  ${price}</p>
     <p className="font-bold">Rating {rating}</p>
     <div className="card-actions">
-      <button className="btn btn-primary">View Details</button>
+      <Link to={`/toys/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
+     
     </div>
   </div>
 </div>
