@@ -8,7 +8,7 @@ const MyToys = () => {
     
     const [toys,setToys] =useState([])
 
-    const url = `https://toy-server-snowy.vercel.app/toys?email=${user.email}`
+    const url = `https://toy-server-snowy.vercel.app/toysByEmail?email=${user?.email}`
 
  useEffect(() => {
     fetch(url)

@@ -1,7 +1,11 @@
  
 
+ 
+
 const MiniBasketBallCard = ({toy}) => {
+   
     const {photo,name,price,rating } = toy
+ 
     return (
       
      
@@ -15,7 +19,7 @@ const MiniBasketBallCard = ({toy}) => {
     <p className="font-bold"> Price  ${price}</p>
     <p className="font-bold">Rating {rating}</p>
     <div className="card-actions">
-      <button className="btn btn-primary">View Details</button>
+      <button  className="btn btn-primary">View Details</button>
     </div>
   </div>
 </div>
