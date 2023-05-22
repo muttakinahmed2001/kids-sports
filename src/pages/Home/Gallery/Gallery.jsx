@@ -15,7 +15,7 @@ const Gallery = () => {
         <div>
             <h1 className="text-5xl text-center mt-80 ">Toy Collections</h1>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-40">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-40 p-5 mx-auto">
            
         {photos.map(photo => <PhotoCard
         key={photo._id} photo={photo}></PhotoCard>)}

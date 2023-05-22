@@ -7,6 +7,7 @@ const Navbar = () => {
 
     const {user,logOut}= useContext(AuthContext)
     const navItems = <>
+    <img className="md:invisible lg:invisible rounded-full ml-3" style={{width: '40px'}} src={user?.photoURL} alt="" />
         <li className="hover:text-[#a7a705]" >
             <Link to='/'>Home</Link> </li>
         <li className="hover:text-[#a7a705]" >
@@ -23,7 +24,7 @@ const Navbar = () => {
         .catch(error => console.log(error))
     }
     return (
-        <div className="navbar bg-base-100 mx-auto">
+        <div className="navbar bg-base-100 mx-auto ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,8 +48,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {user? <div className="flex ">
-                    <div  className="tooltip" data-tip={user.displayName}><img className="rounded-full mr-2" width={'40px'} src={user?.photoURL} alt="" /> </div>
-                    <button onClick={handleLogOut} className="btn btn-outline btn-warning">Log Out</button></div>:<Link to='/login'> <button className="btn btn-outline btn-warning">Login</button></Link>}
+                    <div  className="tooltip" data-tip={user.displayName}><img className=" invisible md:visible lg:visible rounded-full mr-2" width={'40px'} src={user?.photoURL} alt="" /> </div>
+                    <button onClick={handleLogOut} className="btn btn-xs sm:btn-sm md:btn-md   btn-outline btn-warning">Log Out</button></div>:<Link to='/login'> <button className="btn btn-outline btn-warning">Login</button></Link>}
                 
 
               

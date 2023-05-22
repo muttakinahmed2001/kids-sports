@@ -1,9 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import MyToysRow from './MyToysRow';
 
 const MyToys = () => {
     const {user}=useContext(AuthContext)
+    console.log(user.email)
     
     const [toys,setToys] =useState([])
 

@@ -3,7 +3,7 @@ import logo from '../../../src/assets/hop-removebg-preview.png'
  
 const Footer = () => {
     return (
-        <div>
+        <div className='p-5'>
             <footer className="footer text-lg p-10     bg-base-200  ">
   <div>
     <img height={'200px'} src={logo} alt="" />
