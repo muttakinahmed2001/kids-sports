@@ -23,10 +23,11 @@ const UpdateToy = () => {
         const updatedToy = { details, price, quantity }
         console.log(updatedToy)
         console.log(_id)
+        
 
-        fetch(`https://toy-server-snowy.vercel.app/updateToys/${_id}`, {
+        fetch(` http://localhost:5000/updateToys/${_id}`, {
             method: 'PATCH',
-            mode:'no-cors',
+            
             headers: {
                 'content-type': 'application/json'
             },
