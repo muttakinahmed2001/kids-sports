@@ -51,7 +51,7 @@ Swal.fire({
         <td>{rating}</td> 
         <td>{details}</td>
         <td><Link to={`/updateToys/${_id}`}><button className="btn btn-success">Update</button></Link></td>
-        <td ><button className='btn-danger' onClick={()=> handleDeleteToy(_id)}>Delete</button></td>
+        <td ><button className='btn btn-danger' onClick={()=> handleDeleteToy(_id)}>Delete</button></td>
        
       </tr> 
          
