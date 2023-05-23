@@ -16,7 +16,7 @@ const Navbar = () => {
         <li className="hover:text-[#a7a705]"       >  <Link to='/myToys'>My Toys</Link>
         </li>
         <li className="hover:text-[#a7a705]"       ><Link to='/addAToy'>Add a Toy</Link></li>
-        <li className="hover:text-[#a7a705]"       ><Link>Blogs</Link> </li>
+        <li className="hover:text-[#a7a705]"       ><Link to='/blogs'>Blogs</Link> </li>
     </>
     const handleLogOut = () => {
         logOut()
