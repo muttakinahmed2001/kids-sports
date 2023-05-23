@@ -6,7 +6,7 @@ const MyToysRow = ({toy}) => {
     return (
        
            <tr>
-        <th>1</th> 
+         
         <td><img className="rounded-full w-11" src={photo} alt="" /></td>
         <td>{seller}</td>
         <td>{email}</td>

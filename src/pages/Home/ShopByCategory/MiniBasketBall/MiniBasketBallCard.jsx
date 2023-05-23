@@ -1,17 +1,28 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../../../Providers/AuthProvider";
+import Swal from 'sweetalert2'
 
  
 
  
 
 const MiniBasketBallCard = ({toy}) => {
+  const{user}=useContext(AuthContext)
    
     const {_id,photo,name,price,rating } = toy
 
-    const navigate = useNavigate();
+    
 
     const handleCondition = () => {
-navigate(`/toys/${_id}`)
+ if(!user){
+  Swal.fire({
+    title: 'You have to log in first to view details',
+     
+    confirmButtonText: 'Ok'
+  })
+ 
+ }
     }
  
     return (
@@ -27,8 +38,8 @@ navigate(`/toys/${_id}`)
     <p className="font-bold"> Price  ${price}</p>
     <p className="font-bold">Rating {rating}</p>
     <div className="card-actions">
-    <Link to={`/toys/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
-    <button onClick={handleCondition}>With button handler</button>
+    <Link to={`/toys/${_id}`}> <button onClick={handleCondition}className="btn btn-primary">View Details</button></Link>
+    
     </div>
   </div>
 </div>

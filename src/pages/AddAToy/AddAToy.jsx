@@ -3,45 +3,47 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from 'sweetalert2'
 
 const AddAToy = () => {
-  const {user}= useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
-  const handleAddToy = event  => {
-event.preventDefault()
-const form = event.target;
-const name = form.name.value;
-const seller = form.seller.value;
-const email = form.email.value;
-const subCategory = form.category.value;
-const details = form.details.value;
-const price = form.price.value;
-const rating = form.rating.value;
-const quantity = form.quantity.value;
-const photo = form.photo.value;
+    const handleAddToy = event => {
+        event.preventDefault()
+        const form = event.target;
+        const name = form.name.value;
+        const seller = form.seller.value;
+        const email = form.email.value;
+        const subCategory = form.category.value;
+        const details = form.details.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value;
+        const photo = form.photo.value;
 
-const toy = {name,seller,email,subCategory,details,price,rating,quantity,photo}
-console.log(toy)
+        const toy = { name, seller, email, subCategory, details, price, rating, quantity, photo }
+        console.log(toy)
 
-fetch('https://toy-server-snowy.vercel.app/toys', {
-    method: 'POST',
-    headers: {
-        'content-type':'application/json'
-    },
-    body: JSON.stringify(toy)
+        fetch('https://toy-server-snowy.vercel.app/toys', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(toy)
 
-  })
-  .then(res => res.json())
-  .then(data => {console.log(data);
-if(data.insertedId){
-    Swal.fire({
-        title: 'Success',
-        text: 'Toy Added Successfully',
-        icon: 'success',
-        confirmButtonText: 'Cool'
-      })
-}})
-  }
- 
-  
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'Toy Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+    }
+
+
 
     return (
         <div className="bg-[#d7bfbf] p-24">
@@ -76,7 +78,7 @@ if(data.insertedId){
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name='seller' placeholder="Seller Name" defaultValue={user?.displayName} className="input input-bordered w-full" />
+                            <input type="text" name='seller' placeholder="Seller Name" defaultValue={user?.displayName ? user.displayName : null} className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2  ml-4">
@@ -85,20 +87,23 @@ if(data.insertedId){
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name='email' placeholder="Seller Email" defaultValue={user?.email}className="w-full input input-bordered" />
+                            <input type="text" name='email' placeholder="Seller Email" defaultValue={user?.email} className="w-full input input-bordered" />
                         </label>
                     </div>
                 </div>
                 {/* form row */}
                 <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
-                        <label className="label">
-                            <span className="label-text">Sub-category</span>
-                        </label>
-                        <label className="input-group">
+                    <div className="form-control md:w-1/2 ">
+                        <div className="input-group">
+                            <select name='category' className="select select-bordered">
+                                <option disabled selected  >Select a sub-category </option>
 
-                            <input type="text" name='category' placeholder="Sub-category" className="input input-bordered w-full" />
-                        </label>
+                                <option>MiniatureBowling</option>
+                                <option>Miniature Basketball</option>
+                                <option>Miniature Hockey</option>
+                            </select>
+                            <button className="btn">Go</button>
+                        </div>
                     </div>
                     <div className="form-control md:w-1/2  ml-4">
                         <label className="label">
@@ -142,9 +147,9 @@ if(data.insertedId){
                             <input type="text" name='photo' placeholder="photo  URL" className="input input-bordered w-full" />
                         </label>
                     </div>
-                   
+
                 </div>
-                 
+
                 <input className="btn btn-block mt-8 bg-warning" type="submit" value="Add A Toy" />
             </form>
         </div>

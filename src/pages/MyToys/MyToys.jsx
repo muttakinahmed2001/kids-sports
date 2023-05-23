@@ -23,7 +23,7 @@ const MyToys = () => {
 <table className="table table-compact w-full">
  <thead>
    <tr>
-     <th></th> 
+    
 
      <th>Photo</th>
 

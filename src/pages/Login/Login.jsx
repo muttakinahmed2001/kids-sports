@@ -1,11 +1,15 @@
 import { FcGoogle } from "react-icons/fc";
 import { IconContext } from "react-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
   const [error,setError]= useState();
+  const navigate = useNavigate()
+  const location = useLocation();
+  console.log(location)
+  const from = location.state?.from?.pathname
 
   const {signIn,googleSignIn }= useContext(AuthContext);
   const handleLogin = event => {
@@ -19,6 +23,7 @@ const Login = () => {
       const user = result.user;
       console.log(user)
       setError('')
+      navigate(from)
     })
     .catch(error => setError(error.message))
   }
@@ -29,7 +34,7 @@ const Login = () => {
       const user = result.user;
       console.log(user)
       setError('')
-      
+      navigate(from)
     })
     .catch(error => setError(error.message))
 

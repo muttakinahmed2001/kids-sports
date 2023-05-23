@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/toys/:id',
-        element:<ToyDetails></ToyDetails>,
+        element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
         loader:({params})=>fetch(` https://toy-server-snowy.vercel.app/toys/${params.id}`)
 
       }
