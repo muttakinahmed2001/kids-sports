@@ -28,7 +28,7 @@ const Footer = () => {
     <a className="text-[#5858c6] text-xl hover:text-[#a7a705]">Refund policy</a> 
     <a className="text-[#5858c6] text-xl hover:text-[#a7a705]">Terms of use</a> 
     <a className="text-[#5858c6] text-xl hover:text-[#a7a705]">Privacy policy</a>
-    <a className="text-[#5858c6] text-xl hover:text-[#a7a705]">Cookie policy</a>
+    <a className="text-[#5858c6] text-xl hover:text-[#a7a705]">Cookies policy</a>
   </div> 
   <div> <span className="footer-title">Social</span> 
     <div className="grid grid-flow-col gap-4">

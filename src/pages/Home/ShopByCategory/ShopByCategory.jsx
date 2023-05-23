@@ -11,9 +11,9 @@ const ShopByCategory = () => {
           <h1 className='text-5xl mb-5'>Shop by category</h1>
               <Tabs>
     <TabList className='bg-[#f4aa2b]'>
-      <Tab> Mini Bowling</Tab>
-      <Tab> Mini Basketball</Tab>
-      <Tab>Mini Hockey</Tab>
+      <Tab> Miniature Bowling</Tab>
+      <Tab> Miniature Basketball</Tab>
+      <Tab>Miniature Hockey</Tab>
     </TabList>
 
     <TabPanel className='p-3'>

@@ -49,7 +49,7 @@ const AddAToy = () => {
         <div className="bg-[#d7bfbf] p-24">
             <h2 className="text-4xl font-bold text-center mb-5">Add a Toy</h2>
             <form onSubmit={handleAddToy}>
-                {/* form row name and quantity*/}
+                
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -70,7 +70,6 @@ const AddAToy = () => {
                         </label>
                     </div>
                 </div>
-                {/* form row seller name and email */}
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -91,18 +90,18 @@ const AddAToy = () => {
                         </label>
                     </div>
                 </div>
-                {/* form row */}
+               
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2 ">
                         <div className="input-group">
                             <select name='category' className="select select-bordered">
                                 <option disabled selected  >Select a sub-category </option>
 
-                                <option>MiniatureBowling</option>
+                                <option>Miniature Bowling</option>
                                 <option>Miniature Basketball</option>
                                 <option>Miniature Hockey</option>
                             </select>
-                            <button className="btn">Go</button>
+                          
                         </div>
                     </div>
                     <div className="form-control md:w-1/2  ml-4">
@@ -115,7 +114,7 @@ const AddAToy = () => {
                         </label>
                     </div>
                 </div>
-                {/* form row detail and rating*/}
+                 
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -136,7 +135,7 @@ const AddAToy = () => {
                         </label>
                     </div>
                 </div>
-                {/* form photo row */}
+              
                 <div >
                     <div className="form-control w-full">
                         <label className="label">

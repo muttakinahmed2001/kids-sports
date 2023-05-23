@@ -26,7 +26,6 @@ const MyToys = () => {
     
 
      <th>Photo</th>
-
      <th>Seller</th> 
      <th>email</th>
      <th>Toy Name</th> 
@@ -35,6 +34,8 @@ const MyToys = () => {
      <th>Available Quantity</th> 
      <th>Rating</th> 
      <th> Details</th>
+     <th> Update</th>
+     <th> Delete</th>
    </tr>
  </thead> 
  <tbody>
@@ -45,7 +46,6 @@ const MyToys = () => {
    <tr>
      <th></th> 
      <th>Photo</th>
-
      <th>Seller</th> 
      <th>email</th>
      <th>Toy Name</th> 
@@ -54,6 +54,8 @@ const MyToys = () => {
      <th>Available Quantity</th> 
      <th>Rating</th> 
      <th> Details</th>
+     <th> Update</th>
+     <th> Delete</th>
    </tr>
  </tfoot>
 </table>

@@ -6,7 +6,7 @@ const MiniBowling = () => {
 
     const [toys,setToys] =useState([])
 
-    const url = `https://toy-server-snowy.vercel.app/toysByCategory?subCategory=Miniature%20Bowling`
+    const url = 'https://toy-server-snowy.vercel.app/toysByCategory?subCategory=Miniature%20Bowling'
 
  useEffect(() => {
     fetch(url)
