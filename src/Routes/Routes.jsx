@@ -10,6 +10,7 @@ import MyToys from "../pages/MyToys/MyToys";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../pages/Error/Error";
 import ToyDetails from "../pages/ToyDetails";
+import UpdateToy from "../pages/UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
         element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
         loader:({params})=>fetch(` https://toy-server-snowy.vercel.app/toys/${params.id}`)
 
+      },
+      {
+        path:'updateToys/:id',
+        element:<UpdateToy></UpdateToy>,
+        loader:({params})=> fetch(`https://toy-server-snowy.vercel.app/toys/${params.id}`)
       }
     ]
   },

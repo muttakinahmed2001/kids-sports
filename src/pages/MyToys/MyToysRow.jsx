@@ -1,5 +1,6 @@
  import Swal from 'sweetalert2';
 import deleteIcon from '../../assets/delete.avif'
+import { Link } from 'react-router-dom';
 
 const MyToysRow = ({toy}) => {
     const {_id,seller,photo,name,email,rating,details,subCategory,price,quantity}=toy
@@ -47,7 +48,7 @@ Swal.fire({
         <td>{quantity}</td> 
         <td>{rating}</td> 
         <td>{details}</td>
-        <td><button className="btn btn-success">Update</button></td>
+        <td><Link to={`/updateToys/${_id}`}><button className="btn btn-success">Update</button></Link></td>
         <td ><button onClick={()=> handleDeleteToy(_id)}><img className="rounded-xl" width={'50px'} src={deleteIcon} alt="" /></button></td>
        
       </tr> 
