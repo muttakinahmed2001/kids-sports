@@ -3,10 +3,12 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 const SignUp = () => {
     const [error,setError]= useState();
     const [success,setSuccess]=useState();
     const {signUp }= useContext(AuthContext);
+    useTitle('Sign U')
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
