@@ -24,8 +24,7 @@ const UpdateToy = () => {
         console.log(updatedToy)
         console.log(_id)
         
-
-        fetch(` http://localhost:5000/updateToys/${_id}`, {
+        fetch(`https://toy-server-snowy.vercel.app/updateToys/${_id}`, {
             method: 'PATCH',
             
             headers: {

@@ -5,6 +5,7 @@ import MyToysRow from './MyToysRow';
 const MyToys = () => {
     const {user}=useContext(AuthContext)
     console.log(user.email)
+
     
     const [toys,setToys] =useState([])
 
@@ -39,7 +40,7 @@ const MyToys = () => {
    </tr>
  </thead> 
  <tbody>
-    {toys.map(toy => <MyToysRow key={toy._id} toy={toy}></MyToysRow>)}
+    {toys.map(toy => <MyToysRow key={toy._id} toys={toys} setToys={setToys}toy={toy}></MyToysRow>)}
    
  </tbody> 
  <tfoot>

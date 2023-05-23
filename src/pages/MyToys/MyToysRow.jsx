@@ -2,7 +2,7 @@
 import deleteIcon from '../../assets/delete.avif'
 import { Link } from 'react-router-dom';
 
-const MyToysRow = ({toy}) => {
+const MyToysRow = ({toy,toys,setToys}) => {
     const {_id,seller,photo,name,email,rating,details,subCategory,price,quantity}=toy
     console.log(toy)
 
@@ -29,6 +29,8 @@ Swal.fire({
       'Your file has been deleted.',
       'success'
     )
+    const remaining = toys.filter(toy => toy._id !== _id);
+    setToys(remaining)
   }})
   
   }
@@ -49,7 +51,7 @@ Swal.fire({
         <td>{rating}</td> 
         <td>{details}</td>
         <td><Link to={`/updateToys/${_id}`}><button className="btn btn-success">Update</button></Link></td>
-        <td ><button onClick={()=> handleDeleteToy(_id)}><img className="rounded-xl" width={'50px'} src={deleteIcon} alt="" /></button></td>
+        <td ><button className='btn-danger' onClick={()=> handleDeleteToy(_id)}>Delete</button></td>
        
       </tr> 
          
