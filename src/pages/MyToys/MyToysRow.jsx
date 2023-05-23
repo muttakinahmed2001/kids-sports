@@ -1,5 +1,5 @@
  import Swal from 'sweetalert2';
-import deleteIcon from '../../assets/delete.avif'
+ 
 import { Link } from 'react-router-dom';
 
 const MyToysRow = ({toy,toys,setToys}) => {
