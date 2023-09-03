@@ -3,7 +3,7 @@ import Main from "../Layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp";
- 
+
 import AddAToy from "../pages/AddAToy/AddAToy";
 import AllToys from "../pages/AllToys/AllToys";
 import MyToys from "../pages/MyToys/MyToys";
@@ -19,52 +19,63 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: '/',
-        element: <Home></Home>
+        path: "/",
+        element: <Home></Home>,
       },
       {
-        path:'/login',
-        element:<Login></Login>
-
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path:'signUp',
-        element:<SignUp></SignUp>
+        path: "signUp",
+        element: <SignUp></SignUp>,
       },
       {
-        path: 'allToys',
-        element: <AllToys></AllToys>
-        
+        path: "allToys",
+        element: <AllToys></AllToys>,
       },
       {
-        path:'addAToy',
-        element: <PrivateRoute><AddAToy></AddAToy></PrivateRoute>
+        path: "addAToy",
+        element: (
+          <PrivateRoute>
+            <AddAToy></AddAToy>
+          </PrivateRoute>
+        ),
       },
       {
-        path:'myToys',
-        element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
+        path: "myToys",
+        element: (
+          <PrivateRoute>
+            <MyToys></MyToys>
+          </PrivateRoute>
+        ),
       },
       {
-        path:'/toys/:id',
-        element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader:({params})=>fetch(` https://toy-server-snowy.vercel.app/toys/${params.id}`)
-
+        path: "/toys/:id",
+        element: (
+          <PrivateRoute>
+            <ToyDetails></ToyDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(` http://localhost:5000/toys/${params.id}`),
       },
       {
-        path:'updateToys/:id',
-        element:<UpdateToy></UpdateToy>,
-        loader:({params})=> fetch(`https://toy-server-snowy.vercel.app/toys/${params.id}`)
+        path: "updateToys/:id",
+        element: <UpdateToy></UpdateToy>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
-        path:'blogs',
-        element:<Blogs></Blogs>
-      }
-    ]
+        path: "blogs",
+        element: <Blogs></Blogs>,
+      },
+    ],
   },
   {
-    path:'*',
-    element:<Error></Error>
-  }
+    path: "*",
+    element: <Error></Error>,
+  },
 ]);
 
 export default router;
