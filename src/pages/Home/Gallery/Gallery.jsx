@@ -1,23 +1,24 @@
-import { useEffect, useState } from "react";
-import PhotoCard from "./PhotoCard";
-
 const Gallery = () => {
-  const [photos, setPhotos] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/photos")
-      .then((res) => res.json())
-      .then((data) => setPhotos(data));
-  }, []);
+  const photos = [
+    "https://m.media-amazon.com/images/I/61YfyC3GQ+L._AC_UF894,1000_QL80_.jpg",
+    "https://img.fruugo.com/product/2/11/834536112_max.jpg",
+    "https://static-01.daraz.com.bd/p/2b4caff14db59ab1becd8b88a90a7322.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzoe0Wh6J2RRjzG1gTPvv-jsaCwas-2atknA&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ53JbAsSWUzudx6zranVexKj41PoxLn8L-A&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8YBoLDtdbbxyTl2G69mC77pshyAO6LGZ0pQ&usqp=CAU",
+    "https://m.media-amazon.com/images/I/61NjJL1WGRL._AC_UF894,1000_QL80_.jpg",
+    "https://www.jiomart.com/images/product/original/rv9aah3jwp/channapatna-toys-miniature-bowling-ball-game-desktop-office-indoor-games-corporate-training-and-workshop-stress-relief-for-adults-and-kids-bowling-game-8-9-15-years-boys-birthday-gift-toys-product-images-orv9aah3jwp-p594291523-0-202210061231.jpg?im=Resize=(1000,1000)",
+  ];
   return (
-    <div>
-      <h1 className="text-5xl text-center mt-80 ">Toy Collections</h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-40 p-5 mx-auto">
-        {photos.map((photo) => (
-          <PhotoCard key={photo._id} photo={photo}></PhotoCard>
-        ))}
-      </div>
+    <div className="grid grid-cols-2 sm:grid-cols-4 mt-[200px] gap-10 ">
+      {photos.map((photo, index) => (
+        <div
+          data-aos="fade-down-left"
+          className="w-[200px] h-[200px]"
+          key={index}>
+          <img className="w-100 h-100 object-cover" src={photo} alt="" />
+        </div>
+      ))}
     </div>
   );
 };

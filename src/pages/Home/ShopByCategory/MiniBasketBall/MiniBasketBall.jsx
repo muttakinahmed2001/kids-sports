@@ -13,7 +13,7 @@ const MiniBasketBall = () => {
       .then((data) => setToys(data));
   }, []);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
       {toys.map((toy) => (
         <MiniBasketBallCard key={toy._id} toy={toy}></MiniBasketBallCard>
       ))}

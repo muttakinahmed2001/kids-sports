@@ -1,10 +1,13 @@
-
 # Kids Sports
 
-This project is about a toy company which is sale minature sports toy. User can see  different kinds of toys , toys by category, user can add a toys .User can also see specifically what he/she added. User can login , Sign up etc.
+A MERN Stack project of an E-Commerce Website for exploring categorised toys and authenticated users have diverse control
 
+## Features
+
+-Discover a variety of toys, organised by categories.
+-Authenticated users can seamlessly contribute by adding new toys via a dedicated post-login route.
+-Access a personalized “My Toys” route to view the toys they’ve added, while a public “All Toys” route showcases the complete collection for all visitors.
 
 ## Live site link
 
 [Live site link](https://assignment-11-468db.web.app/)
-

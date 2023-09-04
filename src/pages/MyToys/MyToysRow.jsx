@@ -42,6 +42,7 @@ const MyToysRow = ({ toy, toys, setToys }) => {
       }
     });
   };
+
   return (
     <tr>
       <td>

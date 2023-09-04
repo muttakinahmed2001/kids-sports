@@ -1,8 +1,8 @@
 const Featured = () => {
   const featuredImages = [
-    { img: "/public/featured/image1.jpg", title: "Miniature BasketBall" },
-    { img: "/public/featured/image2.jpg", title: "Miniature Bowling" },
-    { img: "/public/featured/image3.jpg", title: "Miniature Hockey" },
+    { img: "/featured/image1.jpg", title: "Miniature BasketBall" },
+    { img: "/featured/image2.jpg", title: "Miniature Bowling" },
+    { img: "/featured/image3.jpg", title: "Miniature Hockey" },
   ];
 
   return (

@@ -54,7 +54,6 @@ const MyToys = () => {
           </tbody>
           <tfoot>
             <tr>
-              <th></th>
               <th>Photo</th>
               <th>Seller</th>
               <th>email</th>

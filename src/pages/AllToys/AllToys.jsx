@@ -72,7 +72,7 @@ const AllToys = () => {
               <th>Seller</th>
               <th>Toy Name</th>
               <th>Sub-category</th>
-              <th>price</th>
+              <th>Price</th>
               <th>Available Quantity</th>
               <th>View Details</th>
             </tr>
@@ -84,11 +84,10 @@ const AllToys = () => {
           </tbody>
           <tfoot>
             <tr>
-              <th></th>
               <th>Seller</th>
               <th>Toy Name</th>
               <th>Sub-category</th>
-              <th>price</th>
+              <th>Price</th>
               <th>Available Quantity</th>
               <th>View Details</th>
             </tr>

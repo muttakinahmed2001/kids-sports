@@ -1,4 +1,6 @@
 import useTitle from "../../../hooks/useTitle";
+import Collection from "../../Collection/Collection";
+import Info from "../../Info/Info";
 import Banner from "../Banner/Banner";
 import Featured from "../Featured/Featured";
 import Gallery from "../Gallery/Gallery";
@@ -11,11 +13,15 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <Featured></Featured>
-      <Gallery></Gallery>
-      <ShopByCategory></ShopByCategory>
-      <Products></Products>
-      <Offers></Offers>
+      <div className="p-10">
+        <Gallery></Gallery>
+        <Featured></Featured>
+        <Info></Info>
+        <Collection></Collection>
+        <ShopByCategory></ShopByCategory>
+        <Products></Products>
+        <Offers></Offers>
+      </div>
     </div>
   );
 };
