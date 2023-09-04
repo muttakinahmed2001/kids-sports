@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import MyToysRow from "./MyToysRow";
+import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   console.log(user.email);
   const [asc, setAsc] = useState(true);
   const [toys, setToys] = useState([]);
+  useTitle("My Toys");
 
   const url = `http://localhost:5000/toysByEmail?email=${user?.email}&sort=${
     asc ? "asc" : "desc"

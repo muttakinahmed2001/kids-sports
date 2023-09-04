@@ -1,3 +1,4 @@
+import useTitle from "../../hooks/useTitle";
 import ToysRow from "./ToysRow";
 import { useEffect, useRef, useState } from "react";
 
@@ -5,6 +6,7 @@ const AllToys = () => {
   const [toys, setToys] = useState([]);
   const searchRef = useRef(null);
   const [search, setSearch] = useState("");
+  useTitle("All Toys");
 
   useEffect(() => {
     fetch(`http://localhost:5000/toys?search=${search}`)
