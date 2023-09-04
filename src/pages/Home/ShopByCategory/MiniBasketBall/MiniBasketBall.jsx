@@ -5,7 +5,7 @@ const MiniBasketBall = () => {
   const [toys, setToys] = useState([]);
 
   const url =
-    "http://localhost:5000/toysByCategory?subCategory=Miniature%20Basketball";
+    "https://toy-server-muttakinahmed2001.vercel.app/toysByCategory?subCategory=Miniature%20Basketball";
 
   useEffect(() => {
     fetch(url)

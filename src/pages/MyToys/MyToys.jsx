@@ -10,9 +10,9 @@ const MyToys = () => {
   const [toys, setToys] = useState([]);
   useTitle("My Toys");
 
-  const url = `http://localhost:5000/toysByEmail?email=${user?.email}&sort=${
-    asc ? "asc" : "desc"
-  }`;
+  const url = `https://toy-server-muttakinahmed2001.vercel.app/toysByEmail?email=${
+    user?.email
+  }&sort=${asc ? "asc" : "desc"}`;
 
   useEffect(() => {
     fetch(url)

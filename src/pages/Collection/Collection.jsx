@@ -5,7 +5,7 @@ const Collection = () => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/photos")
+    fetch("https://toy-server-muttakinahmed2001.vercel.app/photos")
       .then((res) => res.json())
       .then((data) => setPhotos(data));
   }, []);

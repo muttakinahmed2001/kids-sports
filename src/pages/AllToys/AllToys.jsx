@@ -9,7 +9,9 @@ const AllToys = () => {
   useTitle("All Toys");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?search=${search}`)
+    fetch(
+      `https://toy-server-muttakinahmed2001.vercel.app/toys?search=${search}`
+    )
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, [search]);
