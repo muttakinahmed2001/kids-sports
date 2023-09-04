@@ -5,18 +5,25 @@ import MyToysRow from "./MyToysRow";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   console.log(user.email);
-
+  const [asc, setAsc] = useState(true);
   const [toys, setToys] = useState([]);
 
-  const url = `http://localhost:5000/toysByEmail?email=${user?.email}`;
+  const url = `http://localhost:5000/toysByEmail?email=${user?.email}&sort=${
+    asc ? "asc" : "desc"
+  }`;
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setToys(data));
-  }, []);
+  }, [asc]);
   return (
     <div>
+      <div className="flex justify-center mb-5">
+        <button className="btn bg-[#2b5e09]" onClick={() => setAsc(!asc)}>
+          {asc ? "Price: High to Low" : " Price: Low to High"}
+        </button>
+      </div>
       <div className="overflow-x-auto w-[1200px]">
         <table className="table table-compact w-full">
           <thead>

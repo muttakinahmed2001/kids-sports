@@ -13,7 +13,7 @@ const AddAToy = () => {
     const email = form.email.value;
     const subCategory = form.category.value;
     const details = form.details.value;
-    const price = form.price.value;
+    const price = parseFloat(form.price.value);
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const photo = form.photo.value;
