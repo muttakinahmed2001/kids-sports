@@ -67,7 +67,7 @@ const AllToys = () => {
           </button>
         </div>
       </div>
-      <div className="overflow-x-auto w-[1200px]">
+      <div className="overflow-x-auto w-full">
         <table className="table table-compact w-full">
           <thead>
             <tr>

@@ -5,7 +5,7 @@ const Products = () => {
       <hr />
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-40">
         <div>
-          <div className="card w-80 bg-base-100 shadow-xl">
+          <div className="card  bg-base-100 shadow-xl">
             <figure>
               <img
                 className="w-full"
@@ -21,7 +21,7 @@ const Products = () => {
           </h3>
         </div>
         <div>
-          <div className="card w-80 bg-base-100 shadow-xl">
+          <div className="card  bg-base-100 shadow-xl">
             <figure>
               <img
                 className="w-full"
@@ -38,7 +38,7 @@ const Products = () => {
           </h3>
         </div>
         <div>
-          <div className="card w-80 bg-base-100 shadow-xl">
+          <div className="card  bg-base-100 shadow-xl">
             <figure>
               <img
                 className="w-full"
@@ -54,7 +54,7 @@ const Products = () => {
           </h3>
         </div>
         <div>
-          <div className="card w-80 bg-base-100 shadow-xl">
+          <div className="card  bg-base-100 shadow-xl">
             <figure>
               <img
                 className="w-full"
@@ -70,7 +70,7 @@ const Products = () => {
           </h3>
         </div>
         <div>
-          <div className="card w-80 bg-base-100 shadow-xl">
+          <div className="card  bg-base-100 shadow-xl">
             <figure>
               <img
                 className="w-full"
@@ -86,7 +86,7 @@ const Products = () => {
           </h3>
         </div>
         <div>
-          <div className="card w-80 bg-base-100 shadow-xl">
+          <div className="card  bg-base-100 shadow-xl">
             <figure>
               <img
                 className="w-full"

@@ -16,9 +16,9 @@ const Featured = () => {
             key={index}
             className="card  bg-base-100 shadow-xl">
             <figure>
-              <div className="w-[300px] h-[300px] border p-2">
+              <div className=" h-[300px] ">
                 <img
-                  className="w-100 h-100 object-cover"
+                  className="w-full h-100 object-cover"
                   src={toy.img}
                   alt="Shoes"
                 />

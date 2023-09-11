@@ -55,11 +55,11 @@ const AddAToy = () => {
   };
 
   return (
-    <div className="bg-[#d7bfbf] p-24">
+    <div className="bg-[#d7bfbf] p-24 text-center">
       <h2 className="text-4xl font-bold text-center mb-5">Add a Toy</h2>
       <form onSubmit={handleAddToy}>
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
+        <div className="md:flex  items-center gap-5 mb-8">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text">Toy Name</span>
             </label>
@@ -72,7 +72,7 @@ const AddAToy = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2  ml-4">
+          <div className="form-control w-full  ">
             <label className="label">
               <span className="label-text">Available Quantity</span>
             </label>
@@ -86,8 +86,8 @@ const AddAToy = () => {
             </label>
           </div>
         </div>
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
+        <div className="md:flex gap-5 mb-8">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text">Seller Name</span>
             </label>
@@ -101,7 +101,7 @@ const AddAToy = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2  ml-4">
+          <div className="form-control w-full  ">
             <label className="label">
               <span className="label-text">Seller Email</span>
             </label>
@@ -117,8 +117,11 @@ const AddAToy = () => {
           </div>
         </div>
 
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2 ">
+        <div className="md:flex items-center gap-5 mb-8">
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text">Category</span>
+            </label>
             <div className="input-group">
               <select name="category" className="select select-bordered">
                 <option disabled selected>
@@ -131,7 +134,7 @@ const AddAToy = () => {
               </select>
             </div>
           </div>
-          <div className="form-control md:w-1/2  ml-4">
+          <div className="form-control w-full  ">
             <label className="label">
               <span className="label-text">Price</span>
             </label>
@@ -146,8 +149,8 @@ const AddAToy = () => {
           </div>
         </div>
 
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
+        <div className="md:flex gap-5 mb-8">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text">Detail Description</span>
             </label>
@@ -160,7 +163,7 @@ const AddAToy = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2  ml-4">
+          <div className="form-control w-full  ">
             <label className="label">
               <span className="label-text">Rating</span>
             </label>

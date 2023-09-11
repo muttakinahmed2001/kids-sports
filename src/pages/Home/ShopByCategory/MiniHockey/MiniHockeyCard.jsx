@@ -20,10 +20,14 @@ const MiniHockeyCard = ({ toy }) => {
 
   return (
     <div>
-      <div className="card h-[500px] w=80 bg-base-100 shadow-xl">
+      <div className="card  h-[500px]  bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
-          <div className="w-[200px] h-[200px]">
-            <img src={photo} alt="Shoes" className="rounded-xl object-cover" />
+          <div className="h-[200px]">
+            <img
+              src={photo}
+              alt="Shoes"
+              className="w-full  h-full rounded-xl "
+            />
           </div>
         </figure>
         <div className="card-body items-center text-center">

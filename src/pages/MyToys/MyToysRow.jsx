@@ -48,7 +48,7 @@ const MyToysRow = ({ toy, toys, setToys }) => {
   return (
     <tr>
       <td>
-        <img className="rounded-full w-11" src={photo} alt="" />
+        <img className="rounded-full w-full" src={photo} alt="" />
       </td>
       <td>{seller}</td>
       <td>{email}</td>

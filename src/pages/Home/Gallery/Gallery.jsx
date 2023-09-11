@@ -12,11 +12,8 @@ const Gallery = () => {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 mt-[200px] gap-10 ">
       {photos.map((photo, index) => (
-        <div
-          data-aos="fade-down-left"
-          className="w-[200px] h-[200px]"
-          key={index}>
-          <img className="w-100 h-100 object-cover" src={photo} alt="" />
+        <div data-aos="fade-down-left" className=" h-[200px]" key={index}>
+          <img className="w-full object-cover" src={photo} alt="" />
         </div>
       ))}
     </div>

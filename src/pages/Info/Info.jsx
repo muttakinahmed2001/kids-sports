@@ -1,8 +1,8 @@
 const Info = () => {
   return (
     <div className="flex justify-center items-center flex-col sm:flex-row gap-20  my-40">
-      <div className="W-[400PX] H-[600px]">
-        <img className="object-cover" src="/child.jpg" alt="" />
+      <div>
+        <img className="w-full object-cover" src="/child.jpg" alt="" />
       </div>
 
       <div>
